@@ -1,4 +1,13 @@
 
+txts := $(wildcard *.txt)
+
+.PHONY: all
+
+all: $(txts:.txt=.m4)
+
+%.m4: %.txt convert.sed
+	sed -E -f convert.sed $< > $@
+
 data/weapons.m4 data/perks.m4:
 	$(MAKE) -f $(submodule_path)/Makefile.gen $@
 
@@ -8,10 +17,3 @@ convert.sed: data/weapons.m4 data/perks.m4
 	echo 's/^dimwishlist:item=([0-9-]+)&perks=([0-9,]+)/wishlist_entry\(\1, \2\)/' >> $@
 	echo 's/^dimwishlist:item=([0-9-]+)/wishlist_entry\(\1\)/' >> $@
 	awk "-F['\`]" '$$2 !~ /^[0-9].*/ { printf "s/%s/%s/\n", $$4, $$2 }' data/perks.m4 >> $@
-
-%.m4: %.txt convert.sed
-	sed -E -f convert.sed $< > $@
-
-txts := $(wildcard *.txt)
-.PHONY: all
-all: $(txts:.txt=.m4)
