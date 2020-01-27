@@ -15,8 +15,8 @@ define(`unwrap', `$1')
 
 define(`argn', `ifelse(`$1', 1, ``$2'', `argn(decr(`$1'), shift(shift($@)))')')
 
-dnl wishlist_entry(expanded_count, item, perks...)
-define(`wishlist_entry', `ifelse(
+dnl _wishlist_entry(expanded_count, item, perks...)
+define(`_wishlist_entry', `ifelse(
 eval($# - 2 - $1 == 0), 1, `single_entry(shift($@))',
 `pushdef(`__cur', argn(incr($1), shift(shift($@))))pushdef(`__index', index(__cur, `|'))dnl
 ifelse(
@@ -28,6 +28,8 @@ popdef(`__cur')popdef(`__index')dnl
 
 define(`_join', `ifelse($3, 0, $1, $3, 1, $1`'$4, `_join($1`'$4`'$2`', `$2', decr(`$3'), shift(shift(shift(shift($@)))))')')
 define(`any_of', `_join(`', `|', $#, $@)')
+
+define(`wishlist_entry', `_wishlist_entry(0, $@)')
 
 changecom(`//')
 
