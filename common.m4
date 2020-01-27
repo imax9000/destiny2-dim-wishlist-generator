@@ -29,4 +29,6 @@ popdef(`__cur')popdef(`__index')dnl
 define(`_join', `ifelse($3, 0, $1, $3, 1, $1`'$4, `_join($1`'$4`'$2`', `$2', decr(`$3'), shift(shift(shift(shift($@)))))')')
 define(`any_of', `_join(`', `|', $#, $@)')
 
+changecom(`//')
+
 divert`'dnl
