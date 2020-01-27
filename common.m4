@@ -3,7 +3,7 @@ divert(-1)
 include(`data/perks.m4')
 include(`data/weapons.m4')
 
-define(`single_entry', ``dimwishlist:item='$1`&perks='shift($@)')
+define(`single_entry', ``dimwishlist:item='$1`'ifelse($#, 1, , $2, ,, ``&perks='shift($@)')')
 
 dnl replace_arg(index, value, nargs, args...)
 define(`replace_arg', `ifelse(
