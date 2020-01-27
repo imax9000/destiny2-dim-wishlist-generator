@@ -8,7 +8,7 @@ root := $(dir $(lastword $(MAKEFILE_LIST)))
 datafiles := data/perks.m4 data/weapons.m4
 sources := $(wildcard *.m4)
 
-all: $(sources:.m4=.txt)
+all: $(datafiles) $(sources:.m4=.txt)
 
 install-hooks:
 	for hook in $(root)$(submodule_path)/.hooks/*; do \
