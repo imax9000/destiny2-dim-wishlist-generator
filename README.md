@@ -84,4 +84,4 @@ weapon types, despite identical display names.
 `m4` doesn't recognize macro invocations of macros with "invalid" names.
 Definition of "invalid" includes, among other things, names that start with a
 digit. To work this around you can use `indir` builtin:
-`indir(`123foobar', args...)`
+``indir(`123foobar', args...)``
