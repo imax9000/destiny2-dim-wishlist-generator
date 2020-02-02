@@ -17,3 +17,4 @@ convert.sed: data/weapons.m4 data/perks.m4
 	echo 's/^dimwishlist:item=([0-9-]+)&perks=([0-9,]+)/wishlist_entry\(\1, \2\)/' >> $@
 	echo 's/^dimwishlist:item=([0-9-]+)/wishlist_entry\(\1\)/' >> $@
 	awk "-F['\`]" '$$2 !~ /^[0-9].*/ { printf "s/%s/%s/\n", $$4, $$2 }' data/perks.m4 >> $@
+	awk "-F['\`]" '($$0 ~ /^define/ && $$2 !~ /^[0-9].*/) { printf "s/%s/%s/\n", $$4, $$2 }' $(submodule_path)/src/manual_perks.m4 >> $@

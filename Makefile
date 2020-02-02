@@ -16,7 +16,7 @@ install-hooks:
 	done
 
 %.txt: %.m4 $(submodule_path)/common.m4 $(datafiles)
-	m4 $(submodule_path)/common.m4 $< > $@
+	m4 -Dgen_root="$(submodule_path)" $(submodule_path)/common.m4 $< > $@
 
 $(datafiles) manifest.json names.json:
 	$(MAKE) -f $(submodule_path)/Makefile.gen $@
