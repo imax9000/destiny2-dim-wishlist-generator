@@ -5,7 +5,7 @@ export submodule_path
 
 root := $(dir $(lastword $(MAKEFILE_LIST)))
 
-datafiles := data/perks.m4 data/weapons.m4
+datafiles := data/perks.m4 data/weapons.m4 $(submodule_path)/src/manual_perks.m4 $(submodule_path)/src/manual_weapons.m4
 sources := $(wildcard *.m4)
 
 all: $(datafiles) $(sources:.m4=.txt)

@@ -3,6 +3,7 @@ divert(-1)
 include(`data/perks.m4')
 include(`data/weapons.m4')
 include(gen_root`/src/manual_perks.m4')
+include(gen_root`/src/manual_weapons.m4')
 
 define(`single_entry', ``dimwishlist:item='$1`'ifelse($#, 1, , $2, ,, ``&perks='shift($@)')')
 
