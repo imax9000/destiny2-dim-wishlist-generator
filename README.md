@@ -17,6 +17,21 @@ git add data/
 This will add this repository as a submodule, install pre-commit hook to keep
 generated files up to date, and generate macros for perk and weapon hashes.
 
+### Importing other wishlists
+
+`m4` makes it easy to include additional files in your wishlist. For example,
+you can import `voltron.txt`. First add repository as a submodule:
+
+```sh
+git submodule add https://github.com/48klocs/dim-wish-list-sources.git sources
+```
+
+Then in your wishlist file:
+
+```m4
+include(`sources/voltron.txt')
+```
+
 ## Usage
 
 Create a file with `.m4` extension and write your wishlist there. Example:
