@@ -1,4 +1,4 @@
 #!/bin/sh
 
 make
-git add *.txt
+git add *.txt || exit 0
