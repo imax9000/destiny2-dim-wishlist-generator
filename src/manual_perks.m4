@@ -19,3 +19,5 @@ define(`Trench_Barrel', `2360754333')
 dnl The other one, 2635532173, is specific to Rose
 define(`Accurized_Rounds', `3142289711')
 
+dnl The other one, 2467967826, is specific to Rose
+define(`Chambered_Compensator', `3142289711')
