@@ -2,3 +2,9 @@
 
 make
 git add *.txt || exit 0
+
+# fail if there's untranslated keywords
+! (grep ^dimwishlist: wishlist.txt \
+  | sed -e 's/^dimwishlist:item=\([^&]*\)&perks=\([^#]*\)#*.*$/\1 \2/;s/[0-9 ,]*//' \
+  | grep -v '^$')
+  
