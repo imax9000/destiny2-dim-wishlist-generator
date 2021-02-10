@@ -21,3 +21,12 @@ define(`Accurized_Rounds', `3142289711')
 
 dnl The other one, 2467967826, is specific to Rose
 define(`Chambered_Compensator', `3142289711')
+
+dnl The other one, 332773068, is specific to Jotunn
+define(`Volatile_Launch', `1478423395')
+
+dnl The other one, 3337692349, is specific to Whisper
+define(`Mulligan', `3513791699')
+
+dnl The other one, 1070100196, is Izanagi's trait
+define(`Honed_Edge', `2827049491')
