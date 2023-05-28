@@ -14,7 +14,7 @@ data:
 	mkdir data
 
 data/perks.m4: manifest.json $(submodule_path)/src/gen_perks.jq data
-	jq --raw-output -f $(submodule_path)/src/gen_perks.jq $< | sort > $@
+	jq --raw-output -f $(submodule_path)/src/gen_perks.jq $< > $@
 
 data/weapons.m4: manifest.json $(submodule_path)/src/gen_weapons.jq data
-	jq --raw-output -f $(submodule_path)/src/gen_weapons.jq $< | sort > $@
+	jq --raw-output -f $(submodule_path)/src/gen_weapons.jq $< > $@
