@@ -30,3 +30,21 @@ define(`Mulligan', `3513791699')
 
 dnl The other one, 1070100196, is Izanagi's trait
 define(`Honed_Edge', `2827049491')
+
+dnl The other one, 777589557, is specific to the new Whisper
+define(`Enlightened_Action', `3828510309')
+
+dnl The other one, 777589559, is specific to the new Whisper
+define(`Field_Prep', `2869569095')
+
+dnl The other one, 2578928833, is specific to the new Outbreak Perfected
+define(`Headseeker', `460017080')
+
+dnl The other one, 777589556, is specific to the new Whisper
+define(`No_Distractions', `2866798147')
+
+dnl The other one, 2578928835, is specific to the new Outbreak Perfected
+define(`Rapid_Hit', `247725512')
+
+dnl The other one, 2578928832, is specific to the new Outbreak Perfected
+define(`Rewind_Rounds', `3418782618')
