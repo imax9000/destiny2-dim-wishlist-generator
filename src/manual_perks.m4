@@ -50,3 +50,5 @@ dnl The other one, 2578928832, is specific to the new Outbreak Perfected
 define(`Rewind_Rounds', `3418782618')
 
 define(`Deconstruct', any_of(`3993379141', `1164602481'))
+
+define(`Firefly', any_of(`3824105627', `1183436451'))
